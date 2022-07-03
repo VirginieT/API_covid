@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use DateTime;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class CallApiService
@@ -23,12 +24,21 @@ class CallApiService
         return $this->getApi('AllLiveData');
     }
 
+    public function getAllDataByDate($date): array
+    {
+        return $this->getApi('AllDataByDate?date=' . $date);
+    }
+
+    public function getDepartmentData($department): array
+    {
+        return $this->getApi('LiveDataByDepartement?Departement=' . $department);
+    }
+
     private function getApi(string $var)
-    // $var correspond à la fin du enpoint sur lequel on va faire le GET
     {
         $response = $this->client->request(
             'GET',
-            'https://coronavirusapifr.herokuapp.com/data/live/france' . $var
+            'https://coronavirusapi-france.now.sh/' . $var
         );
 
         return $response->toArray();
