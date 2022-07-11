@@ -4,4 +4,4 @@ https://coronavirusapifr.herokuapp.com/data/live/france
 via https://github.com/florianzemma/CoronavirusAPI-France
 
 ### Création d'un service CallApiService
-Afin de ne pas répéter le code dans le Controller
+Afin de ne pas répéter le code dans le Controller -> il aura pour mission d'intéroger l'API
