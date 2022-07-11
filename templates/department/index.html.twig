@@ -1,45 +1,35 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Les chiffres du COVID-19|{{ data.LiveDataByDepartement.0.nom }}
-{% endblock %}
+{% block title %}Les chiffres du COVID-19| {% endblock %}
 
-{% block body %}
-    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Les chiffres du COVID-19 -
-            {{ data.LiveDataByDepartement.0.nom }}</h1>
-        <p class="lead">Source :
-            {{ data.LiveDataByDepartement.0.sourceType }}</p>
-        <p class="lead">Date d'actualisation :
-            {{ data.LiveDataByDepartement.0.date }}</p>
-    </div>
 
-    <div class="card mb-5 shadow-lg">
-        <div class="card-body">
-            {{ render_chart(chart) }}
-        </div>
-    </div>
 
-    <div class="row text-center">
-        <div class="col">
-            <div class="card mb-4 shadow-sm mt-4">
-                <div class="card-header">
-                    <h4 class="my-0 fw-normal">Nombre d’hospitalisations</h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">{{ data.LiveDataByDepartement.0.hospitalises }}</h1>
-                </div>
+{% block content %}
+        <h1> Les chiffres du Covid 19 pour le departement {{data[0].lib_dep}} </h1>
+
+        <div class="row"> 
+            <div class="col-12">
+                <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Date du jour</th>
+      <th scope="col">Retour à domicile</th>
+      <th scope="col">Hospitalisation</th>
+      <th scope="col">Réanimation</th>
+      <th scope="col">Décès</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{data[0].date}}</td>
+      <td>{{data[0].incid_rad}}</td>
+      <td>{{data[0].incid_hosp}}</td>
+      <td>{{data[0].incid_rea}}</td>
+      <td>{{data[0].incid_dchosp}}</td>
+    </tr>
+  </tbody>
+</table>
             </div>
         </div>
-        <div class="col">
-            <div class="card mb-4 shadow-sm mt-4">
-                <div class="card-header">
-                    <h4 class="my-0 fw-normal">Nombre de personnes réa</h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">{{ data.LiveDataByDepartement.0.reanimation }}</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
+  
 {% endblock %}
