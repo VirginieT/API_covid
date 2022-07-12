@@ -26,11 +26,6 @@ class CallApiService
 
     public function getFranceData(): array
     {
-        $response = $this->client->request(
-            'GET',
-            'https://api.covid19api.com/country/france/'
-        );
-                
-
-        return $response->toArray();
+        return $this->getAllData()['Countries'][60];
     }
+}
