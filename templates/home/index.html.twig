@@ -1,0 +1,225 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les chiffres du Coronavirus
+{% endblock %}
+
+{% block body %}
+	<div class="album py-5" id="france">
+		<div class="container">
+            <h1 class="mb-5">Les chiffres du Coronavirus dans le monde et en France</h1>
+
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                <div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés monde</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie au niveau mondial</p>
+						</div>
+                        <h3 class="card-footer bg-success text-dark mx-2 rounded-pill">{{ data.Global.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+                <div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés France</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en France</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.60.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Belgique</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Belgique</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.17.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+                <div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Chine</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Chine</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.36.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+
+                <div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Brésil</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie au Brésil</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.24.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Canada</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie au Canada</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.31.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Colombie</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Colombie</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.37.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Côte d'Ivoire</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Côte d'Ivoire</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.46.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Italie</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Italie</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.83.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+								<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Indonésie</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Indonésie</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.78.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Inde</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Inde</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.77.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Finlande</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Finlande</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.59.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Egypte</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Egypte</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.52.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Japon</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie au Japon</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.85.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+								<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Mexique</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie au Mexique</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.113.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Portugal</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie au Portugal</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.140.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Russie</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Russie</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.144.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Afrique du Sud</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Afrique du Sud</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.162.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Espagne</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie en Espagne</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.165.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Royaume-Uni</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie au Royaume-Uni</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.185.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">Nombre de cas confirmés Etats-Unis</h5>
+							<p class="card-text">Nombre de cas confirmés depuis le début de la pandémie aux Etats-Unis</p>
+						</div>
+                        <h3 class="card-footer bg-info text-dark mx-2 rounded-pill">{{ data.Countries.186.TotalConfirmed }}</h3>
+					</div>
+				</div>
+
+{% endblock %}
