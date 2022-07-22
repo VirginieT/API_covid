@@ -10,25 +10,6 @@
 
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-				<div class="col">
-					<div class="card shadow-sm h-100">
-						<div class="card-body">
-							<h5 class="card-title">Nombre d’hospitalisations</h5>
-							<p class="card-text">Nombre de personnes actuellement hospitalisées</p>
-						</div>
-                        <h3 class="card-footer bg-warning text-dark mx-2 rounded-pill">{{ data.FranceGlobalLiveData.0.hospitalises }}</h3>
-					</div>
-				</div>
-
-                <div class="col">
-					<div class="card shadow-sm">
-						<div class="card-body">
-							<h5 class="card-title">Nombre de Réa</h5>
-							<p class="card-text">Nombre de personnes actuellement en réanimation</p>
-						</div>
-                        <h3 class="card-footer bg-warning text-dark mx-2 rounded-pill">{{ data.FranceGlobalLiveData.0.reanimation }}</h3>
-					</div>
-				</div>
 
                 <div class="col">
 					<div class="card shadow-sm">
@@ -36,7 +17,7 @@
 							<h5 class="card-title">Nombre total de décès 😥</h5>
 							<p class="card-text">Nombre de personnes décédés depuis le début de la pandémie</p>
 						</div>
-                        <h3 class="card-footer bg-dark text-light mx-2 rounded-pill">{{ data.FranceGlobalLiveData.0.deces + data.FranceGlobalLiveData.0.decesEhpad }}</h3>
+                        <h3 class="card-footer bg-dark text-light mx-2 rounded-pill">{{ data.TotalDeaths }}</h3>
 					</div>
 				</div>
 
@@ -44,7 +25,7 @@
 					<div class="card shadow-sm">
 						<div class="card-body">
 							<h5 class="card-title">Nombre total de guéris</h5>
-							<p class="card-text">Nombre de personnes guéris depuis le début de la pandémie</p>
+							<p class="card-text">Nombre de personnes guéries depuis le début de la pandémie</p>
 						</div>
                         <h3 class="card-footer bg-success text-dark mx-2 rounded-pill">{{ data.FranceGlobalLiveData.0.gueris }}</h3>
 					</div>

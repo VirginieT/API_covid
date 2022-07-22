@@ -20,12 +20,13 @@ class CallApiService
             'https://api.covid19api.com/summary'
         );
                 
-
         return $response->toArray();
     }
 
     public function getFranceData(): array
     {
+        // Countries correspond to the index of the array, 60 is France
         return $this->getAllData()['Countries'][60];
     }
+
 }
