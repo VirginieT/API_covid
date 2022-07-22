@@ -12,10 +12,12 @@ class FranceController extends AbstractController
     /**
      * @Route("/france", name="france")
      */
-    public function index(string $france, CallApiService $callApiService): Response
+    public function index(CallApiService $callApiService): Response
     {
-        return $this->render('france/index.html.twig', [    
-            'data' => $callApiService->getFranceData(),
+        dd($callApiService->getAllData());
+
+        return $this->render('france/index.html.twig', [
+            'franceData' => $callApiService->getFranceData(),
         ]);
     }
 }
